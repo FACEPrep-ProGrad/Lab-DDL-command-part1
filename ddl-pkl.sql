@@ -2,48 +2,52 @@
 
 
 -- 1. **Create table city**
-create table city(city_name VARCHAR(40),city_id varchar(40));
+create table city(id VARCHAR(11), name VARCHAR(50));
 
 
 -- 2. **Create table referee**
-create table referee(referee_name VARCHAR(40),referee_id varchar(40));
+create table referee(id VARCHAR(11), name VARCHAR(50));
 
 
 -- 3. **Create table innings**
-create table innings(innings_name VARCHAR(40));
+create table innings(id INT, innings_number INT);
 
 
 -- 4. **Create table extra_type**
-create table extra_type(extra_game VARCHAR(40));
+create table extra_type(id INT, name VARCHAR(50));
 
 
 -- 5. **Create table skill**
-create table skill(player_skill VARCHAR(40));
+create table skill(id INT, name VARCHAR(50));
 
 
 -- 6. **Create table team**
-create table team(team_name VARCHAR(40));
+create table team(id INT, name VARCHAR(50), coach VARCHAR(50), home_city INT, captain INT);
+
 
 -- 7. **Create table player**
-create table player(table_num NUMBER(4));
+create table player(id INT, name VARCHAR(50), country VARCHAR(50), skill_id INT, team_id INT);
 
 
 -- 8. **Create table venue**
-create table venue(venue_time DATE);
+create table venue( id INT, stadium_name VARCHAR(50),city_id INT);
+
 
 -- 9. **Create table event**
-create table event(event_day DATE);
+create table event(id INT, innings_id INT, event_no INT, raider_id INT, raid_points INT, defending_points INT, clack_in_econds INT, team_one_score INT, team_two_score INT);
+
 
 -- 10. **Create table extra_event**
-create table extra_event(event_name VARCHAR(20));
+create table extra_event(id INT, event_id INT, extra_type_id INT, points INT, scoring_team_id INT);
+
 
 -- 11. **Create table outcome**
-create table outcome(outcome VARCHAR(20));
+create table outcome(id INT, status VARCHAR(100),  winner_team_id INT, score INT, player_of_match INT);
 
 
 -- 12. **Create table game**
-create table game(game_id VARCHAR(20),game_name VARCHAR(20));
-
+create table game(id INT, game_date DATE, team_id_1 INT, team_id_2 INT, venue_id INT, outcome_id INT, referee_id_1 INT, referee_id_2 INT, first_innings_id INT, second_innings_id INT);
+DROP table game;
 
 -- 13. **Drop table city**
 DROP table city;
