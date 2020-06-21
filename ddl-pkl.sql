@@ -34,7 +34,7 @@ create table venue( id INT, stadium_name VARCHAR(50),city_id INT);
 
 
 -- 9. **Create table event**
-create table event(id INT, innings_id INT, event_no INT, raider_id INT, raid_points INT, defending_points INT, clack_in_econds INT, team_one_score INT, team_two_score INT);
+create table event(id INT, innings_id INT, event_no INT, raider_id INT, raid_points INT, defending_points INT, clack_in_seconds INT, team_one_score INT, team_two_score INT);
 
 
 -- 10. **Create table extra_event**
